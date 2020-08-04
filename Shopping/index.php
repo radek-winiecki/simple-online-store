@@ -31,9 +31,9 @@ require_once('./php/component.php');
     <div class="row text-center py-5">
         <?php
         component("Product 1", 599, "./upload/product1.png");
-        component("Product 2", 599, "./upload/product2.png");
-        component("Product 3", 599, "./upload/product3.png");
-        component("Product 4", 599, "./upload/product4.png");
+        component("Product 2", 99, "./upload/product2.png");
+        component("Product 3", 59, "./upload/product3.png");
+        component("Product 4", 499, "./upload/product4.png");
         ?>
     </div>
 </div>
