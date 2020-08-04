@@ -1,7 +1,11 @@
 <?php
 
+require_once ('php/CreateDb.php');
 require_once('./php/component.php');
 
+
+//create instance of CreateDb class
+$database = new CreateDb("Productdb", "Producttb");
 ?>
 
 <!doctype html>
@@ -30,10 +34,10 @@ require_once('./php/component.php');
 <div class="container">
     <div class="row text-center py-5">
         <?php
-        component("Product 1", 599, "./upload/product1.png");
-        component("Product 2", 99, "./upload/product2.png");
-        component("Product 3", 59, "./upload/product3.png");
-        component("Product 4", 499, "./upload/product4.png");
+        $result = $database->getData();
+        while ($row = mysqli_fetch_assoc($result)){
+            component($row['product_name'], $row['product_price'], $row['product_image'], $row['id']);
+        }
         ?>
     </div>
 </div>
