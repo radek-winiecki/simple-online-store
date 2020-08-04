@@ -30,10 +30,10 @@ require_once('./php/component.php');
 <div class="container">
     <div class="row text-center py-5">
         <?php
-        component();
-        component();
-        component();
-        component();
+        component("Product 1", 599, "./upload/product1.png");
+        component("Product 2", 599, "./upload/product2.png");
+        component("Product 3", 599, "./upload/product3.png");
+        component("Product 4", 599, "./upload/product4.png");
         ?>
     </div>
 </div>

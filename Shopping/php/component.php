@@ -1,5 +1,5 @@
 <?php
-function component()
+function component($productname, $productprice, $productimg)
 {
     $element = "
     
@@ -7,10 +7,10 @@ function component()
             <form action=\"index.php\" method=\"post\">
                 <div class=\"card shadow\">
                     <div>
-                        <img src=\"./upload/product1.png\" alt=\"Image1\" class=\"img-fluid card-img-top\">
+                        <img src=\"$productimg\" alt=\"Image1\" class=\"img-fluid card-img-top\">
                     </div>
                     <div class=\"card-body\">
-                        <h5 class=\"card-title\">Product1</h5>
+                        <h5 class=\"card-title\">$productname</h5>
                         <h6>
                             <i class=\"fas fa-star\"></i>
                             <i class=\"fas fa-star\"></i>
@@ -23,7 +23,7 @@ function component()
                         </p>
                         <h5>
                             <small><s class=\"text-secondary\">$519</s></small>
-                            <span class=\"price\">$599</span>
+                            <span class=\"price\">$productprice</span>
                         </h5>
                         <button type=\"submit\" class=\"btn btn-warning my-3\" name=\"add\">Add to Cart <i
                                     class=\"fas fa-shopping-cart\"></i></button>
