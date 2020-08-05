@@ -1,6 +1,7 @@
 <?php
 
-function component($productname, $productprice, $productimg, $productid){
+function component($productname, $productprice, $productimg, $productid)
+{
     $element = "
     
     <div class=\"col-md-3 col-sm-6 my-3 my-md-0\">
@@ -25,7 +26,6 @@ function component($productname, $productprice, $productimg, $productid){
                                 <small><s class=\"text-secondary\">$519</s></small>
                                 <span class=\"price\">$$productprice</span>
                             </h5>
-
                             <button type=\"submit\" class=\"btn btn-warning my-3\" name=\"add\">Add to Cart <i class=\"fas fa-shopping-cart\"></i></button>
                              <input type='hidden' name='product_id' value='$productid'>
                         </div>
@@ -36,7 +36,8 @@ function component($productname, $productprice, $productimg, $productid){
     echo $element;
 }
 
-function cartElement($productimg, $productname, $productprice, $productid){
+function cartElement($productimg, $productname, $productprice, $productid)
+{
     $element = "
     
     <form action=\"cart.php?action=remove&id=$productid\" method=\"post\" class=\"cart-items\">
@@ -64,7 +65,7 @@ function cartElement($productimg, $productname, $productprice, $productid){
                 </form>
     
     ";
-    echo  $element;
+    echo $element;
 }
 
 
